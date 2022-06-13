@@ -21,7 +21,7 @@ A fully interactive domain-specific chatbot implemented using Prolog and PySwip.
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!--- TABLE OF CONTENTS --->
 <details>
   <summary>Table of Contents</summary>
   <ol>
