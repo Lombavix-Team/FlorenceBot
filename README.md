@@ -100,7 +100,6 @@ Following the next section, this is the architecture you will end up with.
 Make sure to have two clusters on which you can deploy the following technologies:
 
 1. Apache ZooKeeper (v. 3.7.1) and Apache Kafka (v. 3.1.0) on one cluster.
-2. Apache Spark (v. 3.1.2) on the other cluster.
 
 * ZooKeeper is required in order to run Kafka. The following example shows how to properly setup on each cluster node the ```zoo.cfg``` file in the ```conf``` directory under the ZooKeeper home, to run a ZooKeeper ensemble over a three-nodes cluster:
   ```
