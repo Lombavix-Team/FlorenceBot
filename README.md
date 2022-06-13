@@ -56,7 +56,7 @@ A chatbot is basically software that simulates and processes written and spoken 
 More specific, we provide a software with a UI that allows the user to write (or speak) the question about the specific topic, and read the answer (or listen) almost instantaneously.
 According to [this paper](https://www.researchgate.net/publication/331746678_A_Survey_on_Conversational_AgentsChatbots_Classification_and_Design_Techniques), this chatbot can be classified as:
 * **Fully intercative**: because it is both text and speech based;
-* **Task-Oriented**: because it helps the user to aquire knowledge;
+* **Task-Oriented**: because it helps the user to acquire knowledge;
 * **Rule-based**: because it does not rely on a ML technique, but instead it is based on Prolog rules;
 * **Domain-specific**: FlorenceBot has knowledge base about Santa Maria del Fiore.
 
@@ -101,24 +101,6 @@ Make sure to have two clusters on which you can deploy the following technologie
 
 1. Apache ZooKeeper (v. 3.7.1) and Apache Kafka (v. 3.1.0) on one cluster.
 
-* ZooKeeper is required in order to run Kafka. The following example shows how to properly setup on each cluster node the ```zoo.cfg``` file in the ```conf``` directory under the ZooKeeper home, to run a ZooKeeper ensemble over a three-nodes cluster:
-  ```
-  ticktime=2000
-  dataDir=/var/lib/zookeeper
-  clientPort=2181
-  initLimit=20
-  syncLimit=5
-  server.1=hostnameA:2888:3888
-  server.2=hostnameB:2888:3888
-  server.3=hostnameC:2888:3888
-  ```
-* On each cluster node, the following key properties must be specified in the ```server.properties``` file, located in the ```config``` directory under the Kafka home.
-  * ```broker.id=UID``` (where UID is a unique ID for this broker).
-  * ```listeners=PLAINTEXT://internalIP:9092```
-  * ```advertised.listeners=PLAINTEXT://externalIP:9092```
-  * ```zookeeper.connect=hostnameA:2181,hostnameB:2181,hostnameC:2181/kafka_root_znode```
-
-* If you're using Google Cloud Dataproc clusters, you don't need to manually install and configure Spark as it is already included in the cluster's VM image.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
