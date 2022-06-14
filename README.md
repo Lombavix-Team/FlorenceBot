@@ -32,13 +32,11 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation-and-usage">Installation and usage</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contacts">Contacts</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -86,7 +84,7 @@ To get your system up and running, follow these simple steps.
 ### Prerequisites
 You need and environment with python 3.6.16. This is needed to install particular packages versions.
 
-### Installation
+### Installation and Usage
 1. As described in  the ```requirements.txt``` file, you should install all the listed packages with the correct version.
 2. After that, to let the spacy nlp module work properly, it is needed an additional language module installation:
     ```sh
@@ -94,15 +92,10 @@ You need and environment with python 3.6.16. This is needed to install particula
     ```
 3. Lastly, to let pyswip work correctly, you need to install SWI-Prolog from the [official website](https://www.swi-prolog.org/download/stable/bin/swipl-8.4.2-1.x64.exe.envelope).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-Finally, if everything has been installed and set up correctly, you should be able to run the chatbot:
-  ```sh
-  python ./main.py
-  ```
+4. Finally, if everything has been installed and set up correctly, you should be able to run the chatbot:
+    ```sh
+    python ./main.py
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
