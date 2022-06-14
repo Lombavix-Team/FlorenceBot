@@ -1,5 +1,4 @@
 # FlorenceBot
-A fully interactive domain-specific chatbot implemented using Prolog and PySwip.
 
 <div id="top"></div>
 
@@ -9,12 +8,12 @@ A fully interactive domain-specific chatbot implemented using Prolog and PySwip.
     <img src="img/logo_small.png" alt="Logo">
   </a>
 
-  <h3 align="center">An AI powered chatbot implemented using Python and PySwip</h3>
+  <h3 align="center">A fully interactive domain-specific chatbot implemented using Prolog and PySwip.</h3>
 
-  <p align="center">
+  <h3 align="center">
     <br />
-    <a href="figs/anomalyx_demo.gif">View Demo</a>
-  </p>
+    <a href="img/demo_video.mp4">View Demo</a>
+  </h3>
 </div>
 
 
@@ -59,9 +58,10 @@ According to [this paper](https://www.researchgate.net/publication/331746678_A_S
 * **Domain-specific**: FlorenceBot has knowledge base about Santa Maria del Fiore.
 
 <p align="center" width="100%">
-    <img width="60%" src="figs/anomalyx_demo.gif"> 
+    <img width="45%" src="img/screen.png"> 
 </p>
 
+_For a video demo, please look at [this](img/demo_video.mp4) file_
 
 ### Built With
 
@@ -84,44 +84,25 @@ _For more details, please read the [requirements.txt](/requirements.txt) file_
 To get your system up and running, follow these simple steps.
 
 ### Prerequisites
-
-First, you need to have an **account on any cloud platform** from which you can access **cluster services**. In our case, we used Google Cloud Dataproc clusters, but any other cloud provider should do.
-
-Following the next section, this is the architecture you will end up with.
-
-<p align="center" width="100%">
-    <img width="60%" src="figs/system_architecture.PNG"> 
-</p>
+You need and environment with python 3.6.16. This is needed to install particular packages versions.
 
 ### Installation
-
-Make sure to have two clusters on which you can deploy the following technologies:
-
-1. Apache ZooKeeper (v. 3.7.1) and Apache Kafka (v. 3.1.0) on one cluster.
-
+1. As described in  the ```requirements.txt``` file, you should install all the listed packages with the correct version.
+2. After that, to let the spacy nlp module work properly, it is needed an additional language module installation:
+    ```sh
+     python -m spacy download it_core_news_lg
+    ```
+3. Lastly, to let pyswip work correctly, you need to install SWI-Prolog from the [official website](https://www.swi-prolog.org/download/stable/bin/swipl-8.4.2-1.x64.exe.envelope).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Before launching the streamlit client, make sure that:
-
-* Both Kafka and Spark clusters are up and running.
-* Specify the correct broker IPs and topic names in configuration.ini.
-* The data source is active and publishing on the correct Kafka topic. For test purposes, you could run the data stream producer process provided in this repo:
+Finally, if everything has been installed and set up correctly, you should be able to run the chatbot:
   ```sh
-  python ./datastream_producer.py
+  python ./main.py
   ```
-* Start the Spark streaming analysis script on the spark cluster:
-  ```sh
-  spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 ./structured_stream_process.py
-  ```
-
-Finally, you are ready to run the client:
-```sh
-streamlit run ./main.py
-```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -129,12 +110,9 @@ streamlit run ./main.py
 ## Roadmap
 These are some of the features we would like to add to this project.
 
-- [x] Add anomaly threshold real-time choice
-- [ ] Multidriver support (this involves kafka topics re-organization)
-- [ ] Add statefulness to streamlit
-    - [ ] Counter variables
-    - [ ] Data dict
-- [ ] Use MLlib into the Spark SS data analysis module
+- [x] Add text-to-speech module
+- [ ] Make the chatbot able to reply to greetings
+- [ ] Let the IRS to check on web for additional related images
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
