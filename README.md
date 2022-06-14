@@ -6,16 +6,14 @@ A fully interactive domain-specific chatbot implemented using Prolog and PySwip.
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="client/img/logo_large.png" alt="Logo">
+    <img src="img/logo_small.png" alt="Logo">
   </a>
 
-  <h3 align="center">Cloud-based data visualization and analysis tool for telemetry data</h3>
+  <h3 align="center">An AI powered chatbot implemented using Python and PySwip</h3>
 
   <p align="center">
     <br />
     <a href="figs/anomalyx_demo.gif">View Demo</a>
-    ·
-    <a href="issues">Report Bug</a>
   </p>
 </div>
 
