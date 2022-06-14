@@ -1,0 +1,17 @@
+- Create an environment with python 3.6.16
+- Install the following packages,you can easily use pip. Example: pip install spacy==3.0.6
+    pyswip~=0.2.10
+    spacy~=3.0.6
+    nltk~=3.6.2
+    PyQt5~=5.15.4
+    pygame
+    matplotlib
+    gTTs
+    SpeechRecognition
+    pyaudio
+
+- Install SWI-Prolog from here https://www.swi-prolog.org/download/stable/bin/swipl-8.4.2-1.x64.exe.envelope
+    and, in the installer window, check the box "add the path to the current user"
+
+- Install the following spacy model
+    python -m spacy download it_core_news_lg
