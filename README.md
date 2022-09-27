@@ -50,7 +50,7 @@ A chatbot is basically software that simulates and processes written and spoken 
 
 More specific, we provide a software with a UI that allows the user to write (or speak) the question about the specific topic, and read the answer (or listen) almost instantaneously.
 According to [this paper](https://www.researchgate.net/publication/331746678_A_Survey_on_Conversational_AgentsChatbots_Classification_and_Design_Techniques), this chatbot can be classified as:
-* **Fully intercative**: because it is both text and speech based;
+* **Fully interactive**: because it is both text and speech based;
 * **Task-Oriented**: because it helps the user to acquire knowledge;
 * **Rule-based**: because it does not rely on a ML technique, but instead it is based on Prolog rules;
 * **Domain-specific**: FlorenceBot has knowledge base about Santa Maria del Fiore.
